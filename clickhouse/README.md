@@ -1,4 +1,4 @@
-## ClickHouse 18.14.x Configuration
+# ClickHouse 18.14.x Configuration
 
 This configuration assumes the following hardware footprint:
 
@@ -18,35 +18,36 @@ This configuration assumes the following hardware footprint:
 
 To enable replication in a ClickHouse ZooKeeper is required. ClickHouse will take care of data consistency on all replicas and run restore procedure after failure automatically. It's recommended to deploy ZooKeeper cluster to separate servers. ZooKeeper is very sensitive for latency and ClickHouse may utilize all available system resources.
 
-The following diagram shows a basic setup with 1 shared. Data will be replicated between clickhouse-1 and clickhouse-2. For reliable ZooKeeper service, you should deploy ZooKeeper in a cluster with three nodes. As long as a majority of the ZooKeeper nodes are up, the service will be available. Because ZooKeeper requires a majority, it is best to use an odd number of machines.
+The following diagram shows a basic setup with 1 shard. Data will be replicated between `clickhouse-1` and `clickhouse-2`. For a reliable ZooKeeper service, you should deploy ZooKeeper in a cluster with three nodes. As long as a majority of the ZooKeeper nodes are up, the service will be available. Because ZooKeeper requires a majority, it is best to use an odd number of machines.
 
 ### Setup 2 Node ClickHouse Cluster
 
-In the following chapters we will refer to the host names in the blue boxes of the diagram: clickhouse-1, clickhouse-2, zookeeper-1, ...
+In the following chapters we will refer to the host names in the blue boxes of the diagram: `clickhouse-1, clickhouse-2, zookeeper-1, ...`
 You can name the hosts however you like. Just make sure to replace the names in the config files that we provide.
 
 ![ClickHouse/ZooKeeper Cluster Setup](../images/clickhouse-1.png)
 
 ### Installation
 
-After installing the ZooKeeper cluster you can install ClickHouse on host clickhouse-1 and clickhouse-2, using the Instana packages.
+After installing the ZooKeeper cluster you can install ClickHouse on host `clickhouse-1` and `clickhouse-2`.
 
-Debian:
+#### Debian:
+
 ```
 apt-get install clickhouse
 ```
 
-RedHat/CentOS:
+#### RedHat/CentOS:
+
 ```
 yum install -y clickhouse
 ```
 
 ### Configuration
 
-- [base-config](base-config) contains basic configuration files
-- `1-shard-clickhouse-setup` contains config files for a 2 node clickhouse cluster with 1 shard
-- `2-shard-clickhouse-setup` contains config files for a 4 node clickhouse cluster with 2 shards
-
+- [config](config) contains basic configuration files
+- [1-shard-clickhouse-setup](1-shard-clickhouse-setup) contains config files for a 2 node clickhouse cluster with 1 shard
+- [2-shard-clickhouse-setup](2-shard-clickhouse-setup) contains config files for a 4 node clickhouse cluster with 2 shards
 
 ### Start / Stop ClickHouse service
 
@@ -80,6 +81,6 @@ tail -f /<path to logs>/clickhouse/clickhouse-server.err.log
 
 Installing a larger ClickHouse cluster with multiple shards is required when the write and query performance are too slow.
 
-The installation steps are identical to the single shard setup. You need to setup a three node ZooKeeper cluster and your 2 * Number of Shards  ClickHouse hosts. You only need to make a configuration change to dynamic.xml from ClickHouse. The configuration file below is an example for a 2 shards, 4 host ClickHouse cluster setup.
+The installation steps are identical to the single shard setup. You need to setup a three node ZooKeeper cluster and your `2 * Number of Shards`  ClickHouse hosts. You only need to make a configuration change to [config/dynamic.xml](config/dynamic.xml) from ClickHouse.
 
 ![ClickHouse/ZooKeeper Cluster Setup](../images/clickhouse-2.png)
