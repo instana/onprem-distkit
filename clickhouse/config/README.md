@@ -11,17 +11,17 @@ Variables: none
 Filepath: `/etc/clickhouse/dynamic.xml`
 
 Variables:
-- ${ CLUSTER_NAME }
-- ${ HOSTNAME }
-- ${ SHARD_NUMBER }
-- ${ REPLICA_ONE_FQDN }
-- ${ REPLICA_TWO_FQDN }
-- ${ ZOOKEEPER_ONE_IP }
-- ${ ZOOKEEPER_ONE_PORT }
-- ${ ZOOKEEPER_TWO_IP }
-- ${ ZOOKEEPER_TWO_PORT }
-- ${ ZOOKEEPER_THREE_IP }
-- ${ ZOOKEEPER_THREE_PORT }
+- ${ CLUSTER_NAME }, i.e. `example-cluster-name`
+- ${ HOSTNAME }, i.e. `clickhouse-1`
+- ${ SHARD_NUMBER }, i.e. `0`
+- ${ REPLICA_ONE_FQDN }, i.e. `clickhouse-1.example.com`
+- ${ REPLICA_TWO_FQDN }, i.e. `clickhouse-2.example.com`
+- ${ ZOOKEEPER_ONE_IP }, i.e. `IP of zookeeper-1`
+- ${ ZOOKEEPER_ONE_PORT }, i.e. `2181`
+- ${ ZOOKEEPER_TWO_IP }, i.e. `IP of zookeeper-2`
+- ${ ZOOKEEPER_TWO_PORT }, i.e. `2181`
+- ${ ZOOKEEPER_THREE_IP }, i.e. `IP of zookeeper-3`
+- ${ ZOOKEEPER_THREE_PORT }, i.e. `2181`
 
 ## server.xml
 

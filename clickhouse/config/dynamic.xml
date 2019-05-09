@@ -11,11 +11,11 @@
       <shard>
           <internal_replication>true</internal_replication>
           <replica>
-              <host>{ $REPLICA_ONE_FQDN }</host>
+              <host>${ REPLICA_ONE_FQDN }</host>
               <port>9000</port>
           </replica>
           <replica>
-              <host>{ $REPLICA_TWO_FQDN }</host>
+              <host>${ REPLICA_TWO_FQDN }</host>
               <port>9000</port>
           </replica>
       </shard>
