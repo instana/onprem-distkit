@@ -1,4 +1,0 @@
-export MAX_HEAP_SIZE="16G"
-export HEAP_NEWSIZE="4G"
-export JVM_OPTS=" -Dcassandra.allow_unsafe_aggressive_sstable_expiration=true "
-export FD_LIMIT=1048576
