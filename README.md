@@ -8,6 +8,44 @@ This repository contains reference configurations required by Instana's data sto
 - [Kafka](kafka)
 - [Zookeeper](zookeeper)
 
+## Configure Instana Repository
+
+We provide fully tested packages for all datastores required to run Instana. To be able to install these packages you need to setup the Instana Repository. Execute the following lines as root or with equivalent permissions.
+
+### Debian
+
+```
+REPOSITORY="packages.instana.io/release/product/deb"
+OUTPUT="/etc/apt/sources.list.d/instana-product.list"
+echo "deb [arch=amd64] https://_:<customer_agent_key>@${REPOSITORY} generic main" > ${OUTPUT}
+wget -qO - "https://packages.instana.io/Instana.gpg" | apt-key add -
+apt-get update
+```
+
+### RedHat/CentOS
+
+```
+cat >/etc/yum.repos.d/Instana-Product.repo <<EOF
+[instana-product]
+name=Instana-Product
+baseurl=https://_:<customer_agent_key>@packages.instana.io/release/product/rpm/generic/x86_64
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://packages.instana.io/Instana.gpg
+priority=5
+sslverify=1
+
+#proxy=http://x.x.x.x:8080
+#proxy_username=
+#proxy_password=
+EOF
+
+yum makecache -y fast
+```
+
+## System-wide settings
+
 The following `sysctls` should be set on all data store and worker systems:
 
 ```
