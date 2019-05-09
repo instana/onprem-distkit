@@ -7,14 +7,51 @@ This configuration assumes the following hardware footprint:
 - 32 GB memory
 - 6000 IOP SSD volume
 
-A large number of scaleout topologies are possible with elasticsearch, as such the only required values for /etc/elasticsearch/elasticsearch.yml are:
+## Prerequisites
+
+- There are no requirements for the installation of Elasticsearch.
+
+## Overview
+
+Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
+
+### Setup Elasticsearch cluster
+
+### Installation
+
+Run follwing command as root. 
+
+Debian:
+```
+apt-get install elasticsearch
+```
+
+RedHat/CentOS:
+```
+yum install -y elasticsearch
+```
+
+### Configuration
+
+- [config](config) contains example configuration files
+
+### Start / Stop Elasticsearch service
 
 ```
-bootstrap.mlockall: true
+# start elasticsearch
+systemctl start elasticsearch.service
+
+# stop elasticsearch
+systemctl stop elasticsearch.service
+
+# check status of elasticsearch
+systemctl status elasticsearch.service
 ```
 
-Systemd must have the following configured via a dropin /etc/systemd/system/elasticsearch.service.d/elasticsearch.conf
+### Check Logs
+
+#### SystemD logs
 
 ```
-LimitMEMLOCK=infinity
+journalctl -fu elasticsearch
 ```
