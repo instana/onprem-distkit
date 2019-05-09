@@ -16,6 +16,8 @@ This configuration assumes the following hardware footprint:
 
 ## Overview
 
+ClickHouse is an open-source column-oriented DBMS (columnar database management system) for online analytical processing (OLAP).
+
 To enable replication in a ClickHouse ZooKeeper is required. ClickHouse will take care of data consistency on all replicas and run restore procedure after failure automatically. It's recommended to deploy ZooKeeper cluster to separate servers. ZooKeeper is very sensitive for latency and ClickHouse may utilize all available system resources.
 
 The following diagram shows a basic setup with 1 shard. Data will be replicated between `clickhouse-1` and `clickhouse-2`. For a reliable ZooKeeper service, you should deploy ZooKeeper in a cluster with three nodes. As long as a majority of the ZooKeeper nodes are up, the service will be available. Because ZooKeeper requires a majority, it is best to use an odd number of machines.
