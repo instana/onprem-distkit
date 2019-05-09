@@ -2,6 +2,7 @@
 
 ## elasticsearch
 The purpose of files in /etc/default is to provide extra options for starting a service, or override certain aspects of the service's startup.
+
 Filepath: `[/etc/default/elasticsearch](elasticsearch)
 
 Variables:
