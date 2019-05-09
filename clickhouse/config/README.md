@@ -16,11 +16,11 @@ Variables:
 - ${ SHARD_NUMBER }, i.e. `0`
 - ${ REPLICA_ONE_FQDN }, i.e. `clickhouse-1.example.com`
 - ${ REPLICA_TWO_FQDN }, i.e. `clickhouse-2.example.com`
-- ${ ZOOKEEPER_ONE_IP }, i.e. `IP of zookeeper-1`
+- ${ ZOOKEEPER_ONE_IP }, i.e. IP of zookeeper-1 `10.10.50.101`
 - ${ ZOOKEEPER_ONE_PORT }, i.e. `2181`
-- ${ ZOOKEEPER_TWO_IP }, i.e. `IP of zookeeper-2`
+- ${ ZOOKEEPER_TWO_IP }, i.e. IP of zookeeper-2 `10.10.50.102`
 - ${ ZOOKEEPER_TWO_PORT }, i.e. `2181`
-- ${ ZOOKEEPER_THREE_IP }, i.e. `IP of zookeeper-3`
+- ${ ZOOKEEPER_THREE_IP }, i.e. IP of zookeeper-3 `10.10.50.103`
 - ${ ZOOKEEPER_THREE_PORT }, i.e. `2181`
 
 ## server.xml

@@ -1,39 +1,50 @@
 <?xml version="1.0"?>
 <yandex>
   <macros>
-    <cluster>${ CLUSTER_NAME }</cluster>
-    <replica>${ HOSTNAME }</replica>
-    <shard>${ SHARD_NUMBER }</shard>
+    <cluster>example-cluster-name</cluster>
+    <replica>clickhouse-4</replica>
+    <shard>1</shard>
   </macros>
 
   <remote_servers>
-    <${ CLUSTER_NAME }>
+    <example-cluster-name>
       <shard>
           <internal_replication>true</internal_replication>
           <replica>
-              <host>{ $REPLICA_ONE_FQDN }</host>
+              <host>clickhouse-1.example.com</host>
               <port>9000</port>
           </replica>
           <replica>
-              <host>{ $REPLICA_TWO_FQDN }</host>
+              <host>clickhouse-2.example.com</host>
               <port>9000</port>
           </replica>
       </shard>
-    </${ CLUSTER_NAME }>
+      <shard>
+          <internal_replication>true</internal_replication>
+          <replica>
+              <host>clickhouse-3.example.com</host>
+              <port>9000</port>
+          </replica>
+          <replica>
+              <host>clickhouse-4.example.com</host>
+              <port>9000</port>
+          </replica>
+      </shard>
+    </example-cluster-name>
   </remote_servers>
 
   <zookeeper_servers>
     <node index="1">
-      <host>${ ZOOKEEPER_ONE_IP }</host>
-      <port>${ ZOOKEEPER_ONE_PORT }</port>
+      <host>10.10.50.101</host>
+      <port>2181</port>
     </node>
     <node index="2">
-      <host>${ ZOOKEEPER_TWO_IP }</host>
-      <port>${ ZOOKEEPER_TWO_PORT }</port>
+      <host>10.10.50.102</host>
+      <port>2181</port>
     </node>
     <node index="3">
-      <host>${ ZOOKEEPER_THREE_IP }</host>
-      <port>${ ZOOKEEPER_THREE_PORT }</port>
+      <host>10.10.50.103</host>
+      <port>2181</port>
     </node>
     <session_timeout_ms>60000</session_timeout_ms>
   </zookeeper_servers>

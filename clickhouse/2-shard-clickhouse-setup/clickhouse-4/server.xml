@@ -2,8 +2,8 @@
 <yandex>
     <logger>
         <level>information</level>
-        <log>${ LOG_DIRECTORY }/clickhouse-server.log</log>
-        <errorlog>${ LOG_DIRECTORY }/clickhouse-server.err.log</errorlog>
+        <log>/mnt/logs/clickhouse/clickhouse-server.log</log>
+        <errorlog>/mnt/logs/clickhouse/clickhouse-server.err.log</errorlog>
         <size>200M</size>
         <count>10</count>
     </logger>
@@ -100,10 +100,10 @@
 
 
     <!-- Path to data directory, with trailing slash. -->
-    <path>${ DATA_DIRECTORY }/</path>
+    <path>/mnt/data/clickhouse</path>
 
     <!-- Path to temporary data for processing hard queries. -->
-    <tmp_path>${ DATA_DIRECTORY }/tmp/</tmp_path>
+    <tmp_path>/mnt/data/clickhouse/tmp/</tmp_path>
 
     <!-- Path to configuration file with users, access rights, profiles of settings, quotas. -->
     <users_config>users.xml</users_config>
@@ -334,5 +334,5 @@
     <!-- Directory in <clickhouse-path> containing schema files for various input formats.
          The directory will be created if it doesn't exist.
       -->
-    <format_schema_path>${ DATA_DIRECTORY }/format_schemas/</format_schema_path>
+    <format_schema_path>/mnt/data/clickhouse/format_schemas/</format_schema_path>
 </yandex>
