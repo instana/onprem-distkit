@@ -1,15 +1,14 @@
-Instana Data Store Dependency Reference Configurations
-======================================================
+# Instana Data Store Dependency Reference Configurations
 
 This repository contains reference configurations required by Instana's data store dependencies for the following technologies:
 
-- Cassandra
-- ClickHouse
-- ElasticSearch
-- Kafka
-- Zookeeper
+- [Cassandra](cassandra)
+- [ClickHouse](clickhouse)
+- [ElasticSearch](elasticsearch)
+- [Kafka](kafka)
+- [Zookeeper](zookeeper)
 
-The following sysctls should be set on all data store and worker systems:
+The following `sysctls` should be set on all data store and worker systems:
 
 ```
 net.core.somaxconn = 1024
