@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<yandex>
+  <macros>
+    <cluster>${ CLUSTER_NAME }</cluster>
+    <replica>${ HOSTNAME }</replica>
+    <shard>${ SHARD_NUMBER }</shard>
+  </macros>
+
+  <remote_servers>
+    <${ CLUSTER_NAME }>
+      <shard>
+          <internal_replication>true</internal_replication>
+          <replica>
+              <host>${ REPLICA_ONE_FQDN }</host>
+              <port>9000</port>
+          </replica>
+          <replica>
+              <host>${ REPLICA_TWO_FQDN }</host>
+              <port>9000</port>
+          </replica>
+      </shard>
+    </${ CLUSTER_NAME }>
+  </remote_servers>
+
+  <zookeeper_servers>
+    <node index="1">
+      <host>${ ZOOKEEPER_ONE_IP }</host>
+      <port>${ ZOOKEEPER_ONE_PORT }</port>
+    </node>
+    <node index="2">
+      <host>${ ZOOKEEPER_TWO_IP }</host>
+      <port>${ ZOOKEEPER_TWO_PORT }</port>
+    </node>
+    <node index="3">
+      <host>${ ZOOKEEPER_THREE_IP }</host>
+      <port>${ ZOOKEEPER_THREE_PORT }</port>
+    </node>
+    <session_timeout_ms>60000</session_timeout_ms>
+  </zookeeper_servers>
+</yandex>
