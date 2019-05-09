@@ -1,5 +1,4 @@
-Kafka  1.1.x Configuration
-==============================
+# Kafka  1.1.x Configuration
 
 This configuration assumes the following hardware footprint:
 
@@ -33,7 +32,7 @@ yum install -y kafka
 
 ### Configuration
 
-- [config](config) contains example configuration files
+- [config](config) - contains example configuration files
 
 ### Start / Stop Kafka service
 
