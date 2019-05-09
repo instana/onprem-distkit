@@ -17,6 +17,8 @@ Elasticsearch is a search engine based on the Lucene library. It provides a dist
 
 ### Setup Elasticsearch cluster
 
+We can set up Elasticsearch as a single box or as a cluster. As an example we deliver two sample configurations for both setups.
+
 ### Installation
 
 Run follwing command as root. 
@@ -33,7 +35,9 @@ yum install -y elasticsearch
 
 ### Configuration
 
-- [config](config) contains example configuration files
+- [config](config) contains basic example configuration files.
+- [single system](config/single) contains configuration file for single node setup.
+- [distributed system](config/distributed) contains configuration files for dedicated master and data nodes.
 
 ### Start / Stop Elasticsearch service
 
