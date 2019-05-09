@@ -18,11 +18,7 @@ Variables:
 
 ## elasticsearch.yml
  
-Filepath: `/etc/elasticsearch/elasticsearch.yml` - Single node
-
-Filepath: `/etc/elasticsearch/elasticsearch.yml` - Distributed master node
-
-Filepath: `/etc/elasticsearch/elasticsearch.yml` - Distributed data node
+Filepath: `/etc/elasticsearch/elasticsearch.yml`
 
 Variables:
 
