@@ -46,9 +46,9 @@ yum install -y clickhouse
 
 ### Configuration
 
-- [config](config) contains basic configuration files
-- [1-shard-clickhouse-setup](1-shard-clickhouse-setup) contains config files for a 2 node clickhouse cluster with 1 shard
-- [2-shard-clickhouse-setup](2-shard-clickhouse-setup) contains config files for a 4 node clickhouse cluster with 2 shards
+- [config](config) - contains basic configuration files
+- [1-shard-clickhouse-setup](1-shard-clickhouse-setup) - contains config files for a 2 node clickhouse cluster with 1 shard
+- [2-shard-clickhouse-setup](2-shard-clickhouse-setup) - contains config files for a 4 node clickhouse cluster with 2 shards
 
 ### Start / Stop ClickHouse service
 
