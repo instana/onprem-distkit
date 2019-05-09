@@ -35,9 +35,9 @@ yum install -y elasticsearch
 
 ### Configuration
 
-- [config](config) contains basic example configuration files.
-- [single system](config/single) contains configuration file for single node setup.
-- [distributed system](config/distributed) contains configuration files for dedicated master and data nodes.
+- [config](config) - contains basic example configuration files.
+- [single system](config/single) - contains configuration file for single node setup.
+- [distributed system](config/distributed) - contains configuration files for dedicated master and data nodes.
 
 ### Start / Stop Elasticsearch service
 
