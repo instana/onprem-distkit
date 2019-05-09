@@ -1,5 +1,9 @@
 # Configuration files
 
+For a reliable ZooKeeper service, you should deploy ZooKeeper in a cluster with three nodes. As long as a majority of the ZooKeeper nodes are up, the service will be available. Because ZooKeeper requires a majority, it is best to use an odd number of machines.
+
+![ZooKeeper Cluster Setup](../../images/zookeeper-1.png)
+
 ## java.env
 
 Filepath: `/etc/zookeeper/java.env`
