@@ -28,12 +28,12 @@ Run follwing command as root.
 
 Debian:
 ```
-apt-get install cassandra
+apt-get install cassandra libjemalloc1
 ```
 
 RedHat/CentOS:
 ```
-yum install -y cassandra
+yum install -y cassandra jemalloc
 ```
 
 ### Configuration
