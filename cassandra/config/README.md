@@ -2,7 +2,7 @@
 
 ## cassandra.yaml
 
-Filepath: [/etc/cassandra/cassandra.yaml](cassandra.yaml)
+Filepath: `/etc/cassandra/cassandra.yaml`
 
 Variables:
 - ${ CLUSTER_NAME }
@@ -12,7 +12,7 @@ Variables:
 
 ## cassandra
 
-Filepath: [/etc/default/cassandra](cassandra)
+Filepath: `/etc/default/cassandra`
 
 Variables:
 - none
