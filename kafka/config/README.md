@@ -2,7 +2,7 @@
 
 ## server.properties
  
-Filepath: `[/etc/kafka/server.properties](server.properties)
+Filepath: `/etc/kafka/server.properties`
 
 Variables:
 
