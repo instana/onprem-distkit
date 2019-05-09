@@ -38,7 +38,7 @@ yum install -y cassandra
 
 ### Configuration
 
-- [config](config) contains example configuration files
+- [config](config) - contains example configuration files
 
 ### Start / Stop Cassandra service
 
