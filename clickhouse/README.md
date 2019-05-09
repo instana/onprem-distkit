@@ -22,7 +22,8 @@ The following diagram shows a basic setup with 1 shard. Data will be replicated 
 
 ### Setup 2 Node ClickHouse Cluster
 
-In the following chapters we will refer to the host names in the blue boxes of the diagram: `clickhouse-1, clickhouse-2, zookeeper-1, ...`
+The [config files for the 1 shard setup](1-shard-clickhouse-setup)  are using the hostnames from the boxes of the diagram: `clickhouse-1, clickhouse-2, zookeeper-1, ...`.
+
 You can name the hosts however you like. Just make sure to replace the names in the config files that we provide.
 
 ![ClickHouse/ZooKeeper Cluster Setup](../images/clickhouse-1.png)
@@ -76,11 +77,3 @@ journalctl -fu clickhouse
 tail -f /<path to logs>/clickhouse/clickhouse-server.log
 tail -f /<path to logs>/clickhouse/clickhouse-server.err.log
 ```
-
-### Setup 4 node ClickHouse cluster (2 shards)
-
-Installing a larger ClickHouse cluster with multiple shards is required when the write and query performance are too slow.
-
-The installation steps are identical to the single shard setup. You need to setup a three node ZooKeeper cluster and your `2 * Number of Shards`  ClickHouse hosts. You only need to make a configuration change to [config/dynamic.xml](config/dynamic.xml) from ClickHouse.
-
-![ClickHouse/ZooKeeper Cluster Setup](../images/clickhouse-2.png)
