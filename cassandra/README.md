@@ -39,7 +39,7 @@ yum install -y cassandra
 
 - [config](config) contains example configuration files
 
-### Start / Stop ClickHouse service
+### Start / Stop Cassandra service
 
 ```
 # start cassandra

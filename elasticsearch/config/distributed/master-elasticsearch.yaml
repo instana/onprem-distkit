@@ -1,0 +1,25 @@
+cluster.name: ${ CLUSTER_NAME }
+script.inline: true
+security.manager.enabled: false
+
+# path
+path.data: ${ PATH_DATA }
+path.logs: ${ PATH_LOGS }
+path.plugins: ${ PATH_PLUGINS }
+path.work: ${ PATH_WORK }
+# network
+network.publish_host: _eth0_
+network.bind_host: [ _eth0_, _local_ ]
+
+# index option
+index.number_of_shards: 5
+index.number_of_replicas: 1
+
+discovery.zen.ping.multicast.enabled: false
+discovery.zen.ping.unicast.hosts: [ ${ IP_MASTER_1 },${ IP_MASTER_2 },${ IP_MASTER_3 } ]
+discovery.zen.minimum_master_nodes: 2
+
+bootstrap.mlockall: true
+
+node.master: true
+node.data: false
