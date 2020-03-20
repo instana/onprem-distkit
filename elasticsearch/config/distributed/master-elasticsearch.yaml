@@ -7,9 +7,13 @@ path.data: ${ PATH_DATA }
 path.logs: ${ PATH_LOGS }
 path.plugins: ${ PATH_PLUGINS }
 path.work: ${ PATH_WORK }
+
 # network
 network.publish_host: _eth0_
 network.bind_host: [ _eth0_, _local_ ]
+# network - use "ifconfig" if you are using "ens4"
+#network.publish_host: _ens4_
+#network.bind_host: [ _ens4_, _local_ ]
 
 # index option
 index.number_of_shards: 5
