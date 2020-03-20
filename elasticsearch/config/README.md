@@ -18,7 +18,7 @@ Variables:
 
 ## elasticsearch.yaml
  
-Filepath: `/etc/elasticsearch/elasticsearch.yaml`
+Filepath: `/etc/elasticsearch/elasticsearch.yml`
 
 Variables:
 
