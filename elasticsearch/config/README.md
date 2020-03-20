@@ -16,9 +16,9 @@ Filepath: `/etc/systemd/system/elasticsearch.service.d/elasticsearch.conf`
 Variables:
 - none
 
-## elasticsearch
+## elasticsearch.yaml
  
-Filepath: `/etc/elasticsearch/elasticsearch`
+Filepath: `/etc/elasticsearch/elasticsearch.yaml`
 
 Variables:
 
