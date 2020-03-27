@@ -1,10 +1,17 @@
 ## Install RPM / DEB package:
 
+RPM:
+
 ```
-	RPM: 		rpm -U cockroachdb-X.rpm
-	DEB: 		dpkg -i cockroachdb_X.deb
+rpm -U cockroachdb-X.rpm
 ```
 
+DEB:
+
+```
+dpkg -i cockroachdb_X.deb
+```
+	
 ## Start CockroachDB and check status / logs:
 
 ```
