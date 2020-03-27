@@ -4,6 +4,7 @@ This repository contains reference configurations required by Instana's data sto
 
 - [Cassandra](cassandra)
 - [ClickHouse](clickhouse)
+- [CockroachDB](cockroachb)
 - [ElasticSearch](elasticsearch)
 - [Kafka](kafka)
 - [Zookeeper](zookeeper)
@@ -15,8 +16,8 @@ We provide fully tested packages for all datastores required to run Instana. To 
 ### Debian
 
 ```
-REPOSITORY="packages.instana.io/release/product/deb"
-OUTPUT="/etc/apt/sources.list.d/instana-product.list"
+REPOSITORY="packages.instana.io/release/distonprem/deb"
+OUTPUT="/etc/apt/sources.list.d/instana-distonprem.list"
 echo "deb [arch=amd64] https://_:<customer_agent_key>@${REPOSITORY} generic main" > ${OUTPUT}
 wget -qO - "https://packages.instana.io/Instana.gpg" | apt-key add -
 apt-get update
@@ -25,10 +26,10 @@ apt-get update
 ### RedHat/CentOS
 
 ```
-cat >/etc/yum.repos.d/Instana-Product.repo <<EOF
-[instana-product]
-name=Instana-Product
-baseurl=https://_:<customer_agent_key>@packages.instana.io/release/product/rpm/generic/x86_64
+cat >/etc/yum.repos.d/Instana-DistOnPrem.repo <<EOF
+[instana-distonprem]
+name=Instana-DistOnPrem
+baseurl=https://_:<customer_agent_key>@packages.instana.io/release/distonprem/rpm/generic/x86_64
 enabled=1
 gpgcheck=1
 repo_gpgcheck=1
