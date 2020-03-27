@@ -4,7 +4,7 @@ This repository contains reference configurations required by Instana's data sto
 
 - [Cassandra](cassandra)
 - [ClickHouse](clickhouse)
-- [CockroachDB](cockroachb)
+- [CockroachDB](cockroachdb)
 - [ElasticSearch](elasticsearch)
 - [Kafka](kafka)
 - [Zookeeper](zookeeper)
