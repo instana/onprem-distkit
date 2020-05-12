@@ -4,6 +4,9 @@
     <profiles>
         <!-- Default settings. -->
         <default>
+            <!-- required since Instana release 176 --> 
+            <allow_experimental_data_skipping_indices>1</allow_experimental_data_skipping_indices>
+            
             <!-- Maximum memory usage for processing single query, in bytes. -->
             <max_memory_usage>10000000000</max_memory_usage>
 
