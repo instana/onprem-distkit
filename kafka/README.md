@@ -1,4 +1,4 @@
-# Kafka  1.1.x Configuration
+# Kafka 2.4.x Configuration
 
 This configuration assumes the following hardware footprint:
 
