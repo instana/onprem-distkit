@@ -1,5 +1,4 @@
-Elasticsearch 2.3.x Configuration 
-=================================
+# Install Elasticsearch
 
 This configuration assumes the following hardware footprint:
 
@@ -9,7 +8,7 @@ This configuration assumes the following hardware footprint:
 
 ## Prerequisites
 
-- There are no requirements for the installation of Elasticsearch.
+- Install JRE 8, see [Install JRE 8](../instana-jre-8/README.md)
 
 ## Overview
 
@@ -21,7 +20,7 @@ We can set up Elasticsearch as a single box or as a cluster. As an example we de
 
 ### Installation
 
-Run follwing command as root. 
+Run follwing command as root.
 
 Debian:
 ```

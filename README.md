@@ -9,11 +9,18 @@ This repository contains reference configurations required by Instana's data sto
 - [Kafka](kafka)
 - [Zookeeper](zookeeper)
 
+It also contains the JRE package used by
+
+- [JRE 8](instana-jre-8)
+- [JRE 11](instana-jre-11)
+
 ## Configure Instana Repository
 
 We provide fully tested packages for all datastores required to run Instana. To be able to install these packages you need to setup the Instana Repository. Execute the following lines as root or with equivalent permissions.
 
 ### Debian
+
+configure package repository
 
 ```
 REPOSITORY="packages.instana.io/release/distonprem/deb"
@@ -21,6 +28,23 @@ OUTPUT="/etc/apt/sources.list.d/instana-distonprem.list"
 echo "deb [arch=amd64] https://_:<customer_agent_key>@${REPOSITORY} generic main" > ${OUTPUT}
 wget -qO - "https://packages.instana.io/Instana.gpg" | apt-key add -
 apt-get update
+```
+
+check provided packages
+
+```
+grep ^Package /var/lib/apt/lists/packages.instana.io_*_Packages
+
+Package: cassandra-tools
+Package: zookeeper
+Package: elasticsearch
+Package: kafka
+Package: instanactl
+Package: cockroachdb
+Package: cassandra
+Package: instana-jre
+Package: instana-jre-11
+Package: clickhouse
 ```
 
 ### RedHat/CentOS
@@ -37,12 +61,17 @@ gpgkey=https://packages.instana.io/Instana.gpg
 priority=5
 sslverify=1
 
-#proxy=http://x.x.x.x:8080
-#proxy_username=
-#proxy_password=
+# proxy=http://x.x.x.x:8080
+# proxy_username=
+# proxy_password=
 EOF
+```
 
+check provided packages
+
+```
 yum makecache -y fast
+yum repo-pkgs instana-distonprem list
 ```
 
 ## System-wide settings

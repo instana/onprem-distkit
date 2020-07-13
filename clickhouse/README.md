@@ -1,4 +1,4 @@
-# ClickHouse 19.11.8.x Configuration
+# Install ClickHouse
 
 This configuration assumes the following hardware footprint:
 

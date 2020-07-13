@@ -1,4 +1,4 @@
-# Kafka 2.4.x Configuration
+# Install Kafka
 
 This configuration assumes the following hardware footprint:
 
@@ -9,6 +9,7 @@ This configuration assumes the following hardware footprint:
 ## Prerequisites
 
 - Setup 3 node ZooKeeper cluster, see [Setup ZooKeeper cluster](../zookeeper/README.md)
+- Install JRE 11, see [Install JRE 11](../instana-jre-11/README.md)
 
 ## Overview
 
@@ -18,7 +19,7 @@ Apache Kafka aims to provide a unified, high-throughput, low-latency platform fo
 
 ### Installation
 
-Run follwing command as root. 
+Run follwing command as root.
 
 Debian:
 ```

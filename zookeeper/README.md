@@ -1,4 +1,4 @@
-# Zookeeper  3.4.x Configuration
+# Install Zookeeper
 
 This configuration assumes the following hardware footprint:
 
@@ -8,7 +8,7 @@ This configuration assumes the following hardware footprint:
 
 ## Prerequisites
 
-- none
+- Install JRE 11, see [Install JRE 11](../instana-jre-11/README.md)
 
 ## Overview
 
