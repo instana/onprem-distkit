@@ -1,23 +1,5 @@
 # Configuration files
 
-## elasticsearch
-
-The purpose of files in `/etc/default` is to provide extra options for starting a service, or override certain aspects of the service's startup.
-
-Filepath: `/etc/default/elasticsearch`
-
-Variables:
-- none
-
-## elasticsearch.conf
-
-Filepath: `/etc/systemd/system/elasticsearch.service.d/elasticsearch.conf`
-
-Variables:
-- none
-
-## elasticsearch.yaml
- 
 Filepath: `/etc/elasticsearch/elasticsearch.yml`
 
 Variables:
@@ -28,3 +10,20 @@ Variables:
 - ${ PATH_PLUGINS }, i.e. `/mnt/data/elasticsearch/plugins`
 - ${ PATH_WORK }, i.e. `/mnt/data/elasticsearch/work`
 - ${ IP_MASTER_X }, i.e `10.20.30.40`
+
+## SysVinit
+
+Filepath: `/etc/default/elasticsearch`
+
+The purpose of files in `/etc/default` is to provide extra options for starting a service, or override certain aspects of the service's startup.
+
+Variables:
+- none
+
+## systemd
+
+Filepath: `/etc/systemd/system/elasticsearch.service.d/override.conf`
+
+Variables:
+- none
+
