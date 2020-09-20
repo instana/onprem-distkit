@@ -2,8 +2,8 @@
 <yandex>
     <logger>
         <level>information</level>
-        <log>/mnt/logs/clickhouse/clickhouse-server.log</log>
-        <errorlog>/mnt/logs/clickhouse/clickhouse-server.err.log</errorlog>
+        <log>/mnt/logs/clickhouse/clickhouse.log</log>
+        <errorlog>/mnt/logs/clickhouse/clickhouse.err.log</errorlog>
         <size>200M</size>
         <count>10</count>
     </logger>
@@ -23,10 +23,10 @@
     <!-- Used with https_port and tcp_ssl_port. Full ssl options list: https://github.com/yandex/ClickHouse/blob/master/contrib/libpoco/NetSSL_OpenSSL/include/Poco/Net/SSLManager.h#L71 -->
     <openSSL>
         <server> <!-- Used for https server AND secure tcp port -->
-            <!-- openssl req -subj "/CN=localhost" -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout /etc/clickhouse-server/server.key -out /etc/clickhouse-server/server.crt -->
+            <!-- openssl req -subj "/CN=localhost" -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout /etc/clickhouse/server.key -out /etc/clickhouse/server.crt -->
             <certificateFile>/etc/clickhouse/server.crt</certificateFile>
             <privateKeyFile>/etc/clickhouse/server.key</privateKeyFile>
-            <!-- openssl dhparam -out /etc/clickhouse-server/dhparam.pem 4096 -->
+            <!-- openssl dhparam -out /etc/clickhouse/dhparam.pem 4096 -->
             <dhParamsFile>/etc/clickhouse/dhparam.pem</dhParamsFile>
             <verificationMode>none</verificationMode>
             <loadDefaultCAFile>true</loadDefaultCAFile>
@@ -292,7 +292,7 @@
 
     <!-- Protection from accidental DROP.
          If size of a MergeTree table is greater than max_table_size_to_drop (in bytes) than table could not be dropped with any DROP query.
-         If you want do delete one table and don't want to restart clickhouse-server, you could create special file <clickhouse-path>/flags/force_drop_table and make DROP once.
+         If you want do delete one table and don't want to restart clickhouse, you could create special file <clickhouse-path>/flags/force_drop_table and make DROP once.
          By default max_table_size_to_drop is 50GB; max_table_size_to_drop=0 allows to DROP any tables.
          The same for max_partition_size_to_drop.
          Uncomment to disable protection.
