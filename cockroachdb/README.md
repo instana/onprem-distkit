@@ -29,9 +29,10 @@ EnvironmentFile=-/etc/cockroachdb/systemd.env
 ExecStop=/usr/local/bin/cockroach quit
 LimitCORE=infinity
 LimitNOFILE=500000
-```
+
 [Install]
 WantedBy=multi-user.target
+```
 
 ## Start CockroachDB and check status / logs:
 
