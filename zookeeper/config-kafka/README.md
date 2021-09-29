@@ -4,6 +4,13 @@ For a reliable ZooKeeper service, you should deploy ZooKeeper in a cluster with 
 
 ![ZooKeeper Cluster Setup](../../images/zookeeper-1.png)
 
+## systemd overrrides
+
+Filepath: `/etc/systemd/system/zookeeper.service.d/override.conf`
+
+Variables:
+- none
+
 ## java.env
 
 Filepath: `/etc/zookeeper/java.env`
@@ -11,7 +18,7 @@ Filepath: `/etc/zookeeper/java.env`
 Depending on the workload you need to provide the ZooKeeper JVM enough memory
 
 ```
-export JVMFLAGS="-Xmx2048m -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled"
+export JVMFLAGS="-Xmx2048m -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled"
 ```
 
 ## zoo.cfg

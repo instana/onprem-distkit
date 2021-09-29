@@ -28,8 +28,6 @@ yum install -y zookeeper
 
 ### Configuration
 
-#### ZooKeeper for ClickHouse
-
 - [config-clickhouse](config-clickhouse) - ZooKeeper configuration files for ZK ClickHouse cluster
 - [config-kafka](2-shard-clickhouse-setup) - ZooKeeper configuration files for Kafka cluster
 
