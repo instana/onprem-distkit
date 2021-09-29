@@ -34,6 +34,9 @@ yum install -y zookeeper
 ### Start / Stop ZooKeeper service
 
 ```
+# reload configuration
+systemctl daemon-reload
+
 # start zookeeper
 systemctl start zookeeper.service
 
