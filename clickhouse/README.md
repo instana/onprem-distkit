@@ -37,13 +37,13 @@ After installing the ZooKeeper cluster you can install ClickHouse on host `click
 #### Debian:
 
 ```
-apt-get install clickhouse
+apt-get install -y clickhouse=21.3.8.76-lts-1
 ```
 
 #### RedHat/CentOS:
 
 ```
-yum install -y clickhouse
+yum install -y clickhouse-21.3.8.76_lts-1
 ```
 
 ### Configuration
@@ -55,6 +55,9 @@ yum install -y clickhouse
 ### Start / Stop ClickHouse service
 
 ```
+# reload configuration
+systemctl daemon-reload
+
 # start clickhouse
 systemctl start clickhouse.service
 
