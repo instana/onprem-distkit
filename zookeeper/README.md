@@ -17,13 +17,13 @@ This configuration assumes the following hardware footprint:
 #### Debian:
 
 ```
-apt-get install zookeeper
+apt-get install zookeeper=3.6.3-0
 ```
 
 #### RedHat/CentOS:
 
 ```
-yum install -y zookeeper
+yum install -y zookeeper-3.6.3-0
 ```
 
 ### Configuration
