@@ -16,7 +16,7 @@ It also contains the JRE package used by
 
 ## Configure Instana Repository
 
-We provide fully tested packages for all datastores required to run Instana. To be able to install these packages you need to setup the Instana Repository. Execute the following lines as root or with equivalent permissions. 
+We provide fully tested packages for all datastores required to run Instana. To be able to install these packages you need to setup the Instana Repository. Execute the following lines as root or with equivalent permissions.
 
 ### Debian/Ubuntu
 
