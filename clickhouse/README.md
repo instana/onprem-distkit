@@ -55,9 +55,6 @@ yum install -y clickhouse-21.3.8.76_lts-1
 ### Start / Stop ClickHouse service
 
 ```
-# reload configuration
-systemctl daemon-reload
-
 # start clickhouse
 systemctl start clickhouse.service
 
