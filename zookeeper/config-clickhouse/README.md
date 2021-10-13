@@ -4,6 +4,13 @@ For a reliable ZooKeeper service, you should deploy ZooKeeper in a cluster with 
 
 ![ZooKeeper Cluster Setup](../../images/zookeeper-2.png)
 
+## systemd overrrides
+
+Filepath: `/etc/systemd/system/zookeeper.service.d/override.conf`
+
+Variables:
+- none
+
 ## java.env
 
 Filepath: `/etc/zookeeper/java.env`
@@ -11,13 +18,13 @@ Filepath: `/etc/zookeeper/java.env`
 2 node ClickHouse cluster. Depending on the workload you need to provide the ZooKeeper JVM enough memory
 
 ```
-export JVMFLAGS="-Xmx2048m -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled"
+export JVMFLAGS="-Xmx2048m -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled"
 ```
 
 12 node ClickHouse cluster we use the following setting
 
 ```
-export JVMFLAGS="-Xmx10240m -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled"
+export JVMFLAGS="-Xmx10240m -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled"
 ```
 
 ## zoo.cfg
