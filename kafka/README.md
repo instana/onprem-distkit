@@ -21,7 +21,7 @@ Apache Kafka aims to provide a unified, high-throughput, low-latency platform fo
 
 Run follwing command as root.
 
-Debian:
+Debian/Ubuntu:
 ```
 apt-get install kafka=2.7.1-0
 ```
@@ -38,6 +38,9 @@ yum install -y kafka-2.7.1-0
 ### Start / Stop Kafka service
 
 ```
+# reload configuration
+systemctl daemon-reload
+
 # start kafka
 systemctl start kafka.service
 
