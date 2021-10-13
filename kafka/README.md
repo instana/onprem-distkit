@@ -23,12 +23,12 @@ Run follwing command as root.
 
 Debian:
 ```
-apt-get install kafka
+apt-get install kafka=2.7.1-0
 ```
 
 RedHat/CentOS:
 ```
-yum install -y kafka
+yum install -y kafka-2.7.1-0
 ```
 
 ### Configuration
