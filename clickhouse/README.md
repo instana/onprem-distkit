@@ -34,7 +34,7 @@ You can name the hosts however you like. Just make sure to replace the names in 
 
 After installing the ZooKeeper cluster you can install ClickHouse on host `clickhouse-1` and `clickhouse-2`.
 
-#### Debian:
+#### Debian/Ubuntu:
 
 ```
 apt-get install -y clickhouse=21.3.8.76-lts-1
