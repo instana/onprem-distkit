@@ -18,7 +18,7 @@ It also contains the JRE package used by
 
 We provide fully tested packages for all datastores required to run Instana. To be able to install these packages you need to setup the Instana Repository. Execute the following lines as root or with equivalent permissions.
 
-### Debian
+### Debian/Ubuntu
 
 configure package repository
 
@@ -79,9 +79,9 @@ yum repo-pkgs instana-distonprem list
 The following `sysctls` should be set on all data store and worker systems:
 
 ```
-net.core.somaxconn = 1024
-net.ipv4.tcp_fin_timeout = 30
-fs.file-max = 33554432
-net.ipv4.tcp_max_syn_backlog = 512
-net.ipv4.ip_local_port_range = 25000 64000
+sysctl -w net.core.somaxconn=1024
+sysctl -w net.ipv4.tcp_fin_timeout=30
+sysctl -w fs.file-max=33554432
+sysctl -w net.ipv4.tcp_max_syn_backlog=512
+sysctl -w net.ipv4.ip_local_port_range="25000 64000"
 ```
