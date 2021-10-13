@@ -22,7 +22,7 @@
     </${ CLUSTER_NAME }>
   </remote_servers>
 
-  <zookeeper_servers>
+  <zookeeper>
     <node index="1">
       <host>${ ZOOKEEPER_ONE_IP }</host>
       <port>${ ZOOKEEPER_ONE_PORT }</port>
@@ -36,5 +36,5 @@
       <port>${ ZOOKEEPER_THREE_PORT }</port>
     </node>
     <session_timeout_ms>60000</session_timeout_ms>
-  </zookeeper_servers>
+  </zookeeper>
 </yandex>
