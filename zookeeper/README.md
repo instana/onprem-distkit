@@ -14,7 +14,7 @@ This configuration assumes the following hardware footprint:
 
 ### Installation
 
-#### Debian:
+#### Debian/Ubuntu:
 
 ```
 apt-get install zookeeper=3.6.3-0
