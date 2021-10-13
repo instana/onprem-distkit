@@ -25,7 +25,7 @@ Apache Cassandra is a free and open-source, distributed, wide column store, NoSQ
 
 Run follwing command as root.
 
-Debian:
+Debian/Ubuntu:
 ```
 apt-get install cassandra libjemalloc1
 ```
@@ -42,6 +42,9 @@ yum install -y cassandra jemalloc
 ### Start / Stop Cassandra service
 
 ```
+# reload configuration
+systemctl daemon-reload
+
 # start cassandra
 systemctl start cassandra.service
 
