@@ -16,7 +16,7 @@ It also contains the JRE package used by
 
 ## Configure Instana Repository
 
-We provide fully tested packages for all datastores required to run Instana. To be able to install these packages you need to setup the Instana Repository. Execute the following lines as root or with equivalent permissions.  
+We provide fully tested packages for all datastores required to run Instana. To be able to install these packages you need to setup the Instana Repository. Execute the following lines as root or with equivalent permissions. 
 
 ### Debian/Ubuntu
 
@@ -84,5 +84,4 @@ sysctl -w net.ipv4.tcp_fin_timeout=30
 sysctl -w fs.file-max=33554432
 sysctl -w net.ipv4.tcp_max_syn_backlog=512
 sysctl -w net.ipv4.ip_local_port_range="25000 64000"
-sysctl -p
 ```
