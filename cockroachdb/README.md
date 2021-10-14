@@ -11,10 +11,6 @@ This configuration assumes the following hardware footprint:
 > configuration updates made to this repository may impact an already running cluster as they are not guaranteed to be
 > backwards compatible.
 
-## Prerequisites
-
-- Install JRE 8, see [Install JRE 8](../instana-jre-8/README.md)
-
 ## Overview
 
 CockroachDB is a cloud-native distributed SQL database designed to build, scale, and manage modern, data-intensive applications.
@@ -27,12 +23,12 @@ Run follwing command as root.
 
 Debian/Ubuntu:
 ```
-dpkg -i cockroachdb_21.1.6-0_amd64.deb
+apt-get install=21.1.6-0
 ```
 
 RedHat/CentOS:
 ```
-rpm -U cockroachdb-21.1.6-0.x86_64.rpm
+yum install -y cockroachdb-21.1.6-0
 ```
 
 ### Upgrade
@@ -66,9 +62,6 @@ WantedBy=multi-user.target
 ### Start / Stop CockroachDB service
 
 ```
-# reload configuration
-systemctl daemon-reload
-
 # start cockroachdb
 systemctl start cockroachdb
 
