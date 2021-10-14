@@ -37,6 +37,18 @@ yum install -y cassandra-3.11.10-1
 yum install -y jemalloc
 ```
 
+Optional: Run follwing command to install the command line tools with Canssandra.
+
+Debian/Ubuntu:
+```
+apt install -y cassandra-tools=3.11.10
+```
+
+RedHat/CentOS:
+```
+yum install -y cassandra-tools-3.11.10-1
+```
+
 ### Configuration
 
 - [config](config) - contains example configuration files
