@@ -36,7 +36,7 @@ Please refer to [Update CockroachDB](https://www.cockroachlabs.com/docs/stable/u
 
 For example: 
 If you are upgrading from v20.1.x to v21.1.6, you should:
-1. First upgrade to a production release of v20.2.16
+1. First upgrade to a production release of v20.2, e.g. 20.2.6
 
    Debian/Ubuntu:
    ```
