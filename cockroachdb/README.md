@@ -32,32 +32,31 @@ yum install -y cockroachdb-21.1.6-0
 ```
 
 ### Upgrade
-Please refer to [Update CockroachDB](https://www.cockroachlabs.com/docs/stable/upgrade-cockroach-version.html) to upgrade your CockroachDB to 21.1.6.
+Please refer to [Update CockroachDB](https://www.cockroachlabs.com/docs/stable/upgrade-cockroach-version.html) to upgrade your CockroachDB to 21.1.6.a
 
-### Configuration
+For example: 
+If you are upgrading from v20.1.x to v21.1.6, you should:
+1. First upgrade to a production release of v20.2.16
 
-Configure CockroachDB to use systemD
+   Debian/Ubuntu:
+   ```
+   apt-get install cockroachdb=20.2.6-0
+   ```
 
-```
-[Unit]
-Description=CockroachDB
+   RedHat/CentOS:
+   ```
+   yum install -y cockroachdb-20.2.6-0
+   ```
+2. Perform a second rolling upgrade to v21.1.6
+   Debian/Ubuntu:
+   ```
+   apt-get install cockroachdb=21.1.6-0
+   ```
 
-[Service]
-Type=simple
-User=cockroachdb
-Group=cockroachdb
-Restart=always
-RestartSec=30
-ExecStart=/usr/bin/cockroachdb
-EnvironmentFile=-/etc/cockroachdb/systemd.env
-ExecStop=/usr/local/bin/cockroach quit
-LimitCORE=infinity
-LimitNOFILE=500000
-
-[Install]
-WantedBy=multi-user.target
-
-```
+   RedHat/CentOS:
+   ```
+   yum install -y cockroachdb-21.1.6-0
+   ```
 
 ### Start / Stop CockroachDB service
 
