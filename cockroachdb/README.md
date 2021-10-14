@@ -23,7 +23,7 @@ Run follwing command as root.
 
 Debian/Ubuntu:
 ```
-apt-get install=21.1.6-0
+apt-get install cockroachdb=21.1.6-0
 ```
 
 RedHat/CentOS:
