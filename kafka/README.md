@@ -19,7 +19,7 @@ Apache Kafka aims to provide a unified, high-throughput, low-latency platform fo
 
 ### Installation
 
-Run follwing command as root.
+Run following command as root.
 
 Debian/Ubuntu:
 ```

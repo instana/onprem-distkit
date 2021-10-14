@@ -20,7 +20,7 @@ We can set up Elasticsearch as a single box or as a cluster. As an example we de
 
 ### Installation
 
-Run follwing command as root.
+Run following command as root.
 
 Debian:
 ```
