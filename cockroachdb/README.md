@@ -19,11 +19,11 @@ CockroachDB is a cloud-native distributed SQL database designed to build, scale,
 
 ### Installation
 
-Run follwing command as root.
+Run following command as root.
 
 Debian/Ubuntu:
 ```
-apt-get install cockroachdb=21.1.6-0
+apt-get install -y cockroachdb=21.1.6-0
 ```
 
 RedHat/CentOS:
@@ -32,25 +32,26 @@ yum install -y cockroachdb-21.1.6-0
 ```
 
 ### Upgrade
-Please refer to [Update CockroachDB](https://www.cockroachlabs.com/docs/stable/upgrade-cockroach-version.html) to upgrade your CockroachDB to 21.1.6.a
+Please refer to [Update CockroachDB](https://www.cockroachlabs.com/docs/stable/upgrade-cockroach-version.html) to upgrade your CockroachDB to 21.1.6.
 
 For example: 
-If you are upgrading from v20.1.x to v21.1.6, you should:
-1. First upgrade to a production release of v20.2, e.g. 20.2.6
+If you are upgrading from v20.1.17 to v21.1.6, you should:
+1. First upgrade to a production release of v20.2, e.g. 20.2.16
 
    Debian/Ubuntu:
    ```
-   apt-get install cockroachdb=20.2.6-0
+   apt-get install -y cockroachdb=20.2.16-0
    ```
 
    RedHat/CentOS:
    ```
-   yum install -y cockroachdb-20.2.6-0
+   yum install -y cockroachdb-20.2.16-0
    ```
+
 2. Perform a second rolling upgrade to v21.1.6
    Debian/Ubuntu:
    ```
-   apt-get install cockroachdb=21.1.6-0
+   apt-get install -y cockroachdb=21.1.6-0
    ```
 
    RedHat/CentOS:
