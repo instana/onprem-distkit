@@ -11,7 +11,6 @@ This repository contains reference configurations required by Instana's data sto
 
 It also contains the JRE package used by
 
-- [JRE 8](instana-jre-8)
 - [JRE 11](instana-jre-11)
 
 ## Configure Instana Repository
@@ -42,7 +41,6 @@ Package: kafka
 Package: instanactl
 Package: cockroachdb
 Package: cassandra
-Package: instana-jre
 Package: instana-jre-11
 Package: clickhouse
 ```
