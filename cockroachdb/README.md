@@ -19,11 +19,11 @@ CockroachDB is a cloud-native distributed SQL database designed to build, scale,
 
 ### Installation
 
-Run follwing command as root.
+Run following command as root.
 
 Debian/Ubuntu:
 ```
-apt-get install cockroachdb=21.1.6-0
+apt-get install -y cockroachdb=21.1.6-0
 ```
 
 RedHat/CentOS:
@@ -34,34 +34,58 @@ yum install -y cockroachdb-21.1.6-0
 ### Upgrade
 Please refer to [Update CockroachDB](https://www.cockroachlabs.com/docs/stable/upgrade-cockroach-version.html) to upgrade your CockroachDB to 21.1.6.
 
+For example: 
+If you are upgrading from v20.1.17 to v21.1.6, you should:
+1. First upgrade to a production release of v20.2, e.g. 20.2.16
+
+   Debian/Ubuntu:
+   ```
+   apt-get install -y cockroachdb=20.2.16-0
+   ```
+
+   RedHat/CentOS:
+   ```
+   yum install -y cockroachdb-20.2.16-0
+   ```
+
+2. Perform a second rolling upgrade to v21.1.6
+   Debian/Ubuntu:
+   ```
+   apt-get install -y cockroachdb=21.1.6-0
+   ```
+
+   RedHat/CentOS:
+   ```
+   yum install -y cockroachdb-21.1.6-0
+   ```
+
 ### Configuration
 
-Configure CockroachDB to use systemD
+Configure CockroachDB by editing /lib/systemd/system/cockroachdb.service
 
 ```
-[Unit]
-Description=CockroachDB
+...
 
 [Service]
-Type=simple
-User=cockroachdb
-Group=cockroachdb
-Restart=always
-RestartSec=30
-ExecStart=/usr/bin/cockroachdb
-EnvironmentFile=-/etc/cockroachdb/systemd.env
-ExecStop=/usr/local/bin/cockroach quit
-LimitCORE=infinity
-LimitNOFILE=500000
-
-[Install]
-WantedBy=multi-user.target
+...
+ExecStart=/usr/bin/cockroachdb start \
+  --store=</path/to/data/store> \
+  --log-dir=</path/to/log-dir> \
+  --listen-addr=<hostname>:26257 \
+  --http-addr=<hostname>:8081 \
+  --join=<host1>:26257,<host2>:26257 \
+  --pid-file=/path/to/pid \
+  --background
+...
 
 ```
 
 ### Start / Stop CockroachDB service
 
 ```
+# reload configuration
+systemctl daemon-reload
+
 # start cockroachdb
 systemctl start cockroachdb
 
