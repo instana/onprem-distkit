@@ -20,16 +20,16 @@ We can set up Elasticsearch as a single box or as a cluster. As an example we de
 
 ### Installation
 
-Run follwing command as root.
+Run following command as root.
 
 Debian:
 ```
-apt-get install elasticsearch
+apt install elasticsearch=7.10.2
 ```
 
 RedHat/CentOS:
 ```
-yum install -y elasticsearch
+yum install -y elasticsearch-7.10.2-1
 ```
 
 ### Configuration

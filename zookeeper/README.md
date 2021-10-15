@@ -14,21 +14,19 @@ This configuration assumes the following hardware footprint:
 
 ### Installation
 
-#### Debian:
+#### Debian/Ubuntu:
 
 ```
-apt-get install zookeeper
+apt-get install zookeeper=3.6.3-0
 ```
 
 #### RedHat/CentOS:
 
 ```
-yum install -y zookeeper
+yum install -y zookeeper-3.6.3-0
 ```
 
 ### Configuration
-
-#### ZooKeeper for ClickHouse
 
 - [config-clickhouse](config-clickhouse) - ZooKeeper configuration files for ZK ClickHouse cluster
 - [config-kafka](2-shard-clickhouse-setup) - ZooKeeper configuration files for Kafka cluster
@@ -36,6 +34,9 @@ yum install -y zookeeper
 ### Start / Stop ZooKeeper service
 
 ```
+# reload configuration
+systemctl daemon-reload
+
 # start zookeeper
 systemctl start zookeeper.service
 
