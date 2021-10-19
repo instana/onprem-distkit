@@ -108,8 +108,6 @@ After CockroachDB service on all hosts are started, run the cockroach init comma
 
 ```
 
-local machine, run the cockroach init command to complete the node startup process and have them join together as a cluster
-
 ### Check Logs
 
 #### SystemD logs
