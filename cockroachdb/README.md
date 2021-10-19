@@ -68,14 +68,13 @@ Configure CockroachDB by editing /lib/systemd/system/cockroachdb.service
 
 [Service]
 ...
-ExecStart=/usr/bin/cockroachdb start \
+ExecStart=/opt/cockroachdb/cockroach start \
+  --insecure \
   --store=</path/to/data/store> \
-  --log-dir=</path/to/log-dir> \
+  --log='file-defaults: {dir: </path/to/log-dir> }' \
   --listen-addr=<hostname>:26257 \
   --http-addr=<hostname>:8081 \
-  --join=<host1>:26257,<host2>:26257 \
-  --pid-file=/path/to/pid \
-  --background
+  --join=<host1>:26257,<host2>:26257 
 ...
 
 ```
@@ -96,6 +95,20 @@ systemctl stop cockroachdb
 systemctl status cockroachdb
 
 ```
+
+**Note:** Start CockroachDB service for each host in `join` field that you want in your cluster.
+
+
+### Initialize the CockroachDB cluster
+
+After CockroachDB service on all hosts are started, run the cockroach init command to complete the CockroachDB startup process and have them join together as a cluster
+
+```
+/opt/cockroachdb/cockroach  init --insecure --host=<hostname>:26257
+
+```
+
+local machine, run the cockroach init command to complete the node startup process and have them join together as a cluster
 
 ### Check Logs
 
