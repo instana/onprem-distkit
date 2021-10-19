@@ -8,7 +8,7 @@ This configuration assumes the following hardware footprint:
 
 ## Prerequisites
 
-- Install JRE 8, see [Install JRE 8](../instana-jre-8/README.md)
+- Install JRE 11, see [Install JRE 11](../instana-jre-11/README.md)
 
 ## Overview
 
