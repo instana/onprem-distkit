@@ -23,12 +23,12 @@ Run following command as root.
 
 Debian/Ubuntu:
 ```
-apt-get install -y cockroachdb=21.1.6-0
+apt-get install -y cockroachdb=21.1.6-1
 ```
 
 RedHat/CentOS:
 ```
-yum install -y cockroachdb-21.1.6-0
+yum install -y cockroachdb-21.1.6-1
 ```
 
 ### Upgrade
@@ -40,23 +40,23 @@ If you are upgrading from v20.1.17 to v21.1.6, you should:
 
    Debian/Ubuntu:
    ```
-   apt-get install -y cockroachdb=20.2.16-0
+   apt-get install -y cockroachdb=20.2.16-1
    ```
 
    RedHat/CentOS:
    ```
-   yum install -y cockroachdb-20.2.16-0
+   yum install -y cockroachdb-20.2.16-1
    ```
 
 2. Perform a second rolling upgrade to v21.1.6
    Debian/Ubuntu:
    ```
-   apt-get install -y cockroachdb=21.1.6-0
+   apt-get install -y cockroachdb=21.1.6-1
    ```
 
    RedHat/CentOS:
    ```
-   yum install -y cockroachdb-21.1.6-0
+   yum install -y cockroachdb-21.1.6-1
    ```
 
 ### Configuration
