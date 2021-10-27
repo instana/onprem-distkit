@@ -159,7 +159,7 @@
 
          See https://clickhouse.yandex/reference_en.html#Data%20replication
       -->
-    <zookeeper incl="zookeeper_servers" optional="true" />
+    <zookeeper incl="zookeeper" optional="true" />
 
     <!-- Substitutions for parameters of replicated tables.
           Optional. If you don't use replicated tables, you could omit that.
