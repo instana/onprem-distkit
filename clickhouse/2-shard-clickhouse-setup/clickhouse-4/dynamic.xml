@@ -33,7 +33,7 @@
     </example-cluster-name>
   </remote_servers>
 
-  <zookeeper>
+  <zookeeper_servers>
     <node index="1">
       <host>10.10.50.101</host>
       <port>2181</port>
@@ -47,5 +47,5 @@
       <port>2181</port>
     </node>
     <session_timeout_ms>60000</session_timeout_ms>
-  </zookeeper>
+  </zookeeper_servers>
 </yandex>
