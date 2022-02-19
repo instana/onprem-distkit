@@ -24,12 +24,12 @@ Run following command as root.
 
 Debian:
 ```
-apt install elasticsearch=7.10.2
+apt install elasticsearch=7.16.3
 ```
 
 RedHat/CentOS:
 ```
-yum install -y elasticsearch-7.10.2-1
+yum install -y elasticsearch-7.16.3
 ```
 
 ### Configuration
@@ -41,6 +41,9 @@ yum install -y elasticsearch-7.10.2-1
 ### Start / Stop Elasticsearch service
 
 ```
+# reload configuration
+systemctl daemon-reload
+
 # start elasticsearch
 systemctl start elasticsearch.service
 
